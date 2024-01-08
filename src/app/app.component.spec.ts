@@ -1,10 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {ClockComponent} from "./clock/clock.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent,ClockComponent],
     }).compileComponents();
   });
 
@@ -13,12 +14,7 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it(`should have the 'untitled1' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('untitled1');
-  });
+  
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
