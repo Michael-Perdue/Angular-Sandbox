@@ -1,0 +1,7 @@
+<main [class]="size">
+  <h1>{{time}}</h1>
+    <button (click)="handleClick()">{{ clicked ? 'stop' : 'start' }}</button>
+    <button (click)="resetClick()">reset</button>
+</main>
+<app-settings (dataUpdated)="updateSize($event)"></app-settings>
+

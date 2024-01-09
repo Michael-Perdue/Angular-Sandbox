@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
 import { ClockComponent } from './clock/clock.component';
 import { SettingsComponent } from './settings/settings.component';
+import { TimerComponent } from './timer/timer.component';
 export const routes: Routes = [
-  {path: "", component: SettingsComponent,children: [{path: "", component: ClockComponent}]},
-
+  {path: "", component: ClockComponent},
+  {path: "settings", component: SettingsComponent},
+  {path: "timer", component: TimerComponent}
 ];
