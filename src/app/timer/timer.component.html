@@ -4,4 +4,6 @@
     <button (click)="resetClick()">reset</button>
 </main>
 <app-settings (dataUpdated)="updateSize($event)"></app-settings>
-
+<div *ngIf="size == 'small'">
+  <button [routerLink]="'/clock'">Switch to clock</button>
+</div>

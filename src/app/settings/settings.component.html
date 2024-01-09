@@ -1,22 +1,19 @@
-<main [class]="selected">
-  <div *ngIf="clicked">
-    <button (click)="handleClick()">Show Settings</button>
-  </div>
-  <div *ngIf="!clicked">
-    <button (click)="handleClick()">Hide Settings</button>
-    <h1>{{ title }}</h1>
-    <div *ngFor="let item of items; let i = index">
-      <label>
-        <input
-          type="radio"
-          name="optionsGroup"
-          [value]="item.value"
-          (change)="optionChange(item.value)"
-        />
-        {{ i + 1 }} - {{ item.label }}
-      </label>
-    </div>
-
+<div *ngIf="clicked">
+  <button (click)="handleClick()">Show Settings</button>
+</div>
+<div *ngIf="!clicked">
+  <button (click)="handleClick()">Hide Settings</button>
+  <h1>{{ title }}</h1>
+  <div *ngFor="let item of items; let i = index">
+    <label>
+      <input
+        type="radio"
+        name="optionsGroup"
+        [value]="item.value"
+        (change)="optionChange(item.value)"
+      />
+      {{ i + 1 }} - {{ item.label }}
+    </label>
   </div>
 
-</main>
+</div>

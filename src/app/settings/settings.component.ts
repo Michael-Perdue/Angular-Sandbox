@@ -30,7 +30,6 @@ export class SettingsComponent {
     document.body.className = color;
   }
   handleClick() {
-    alert('Button clicked!');
     this.clicked = !this.clicked
     if(this.clicked)
       this.dataUpdated.emit('big');

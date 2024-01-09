@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {SettingsComponent} from "../settings/settings.component";
 import {interval} from "rxjs";
 import {NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-timer',
   standalone: true,
   imports: [
     SettingsComponent,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './timer.component.html',
   styleUrl: './timer.component.css'

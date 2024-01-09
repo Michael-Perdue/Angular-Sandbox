@@ -2,3 +2,6 @@
   <h1>{{time}}</h1>
 </main>
 <app-settings (dataUpdated)="updateSize($event)"></app-settings>
+<div *ngIf="size == 'small'">
+  <button [routerLink]="'/timer'">Switch to Timer</button>
+</div>

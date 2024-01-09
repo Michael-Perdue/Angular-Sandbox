@@ -3,7 +3,8 @@ import { ClockComponent } from './clock/clock.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TimerComponent } from './timer/timer.component';
 export const routes: Routes = [
-  {path: "", component: ClockComponent},
+  {path: "clock", component: ClockComponent},
   {path: "settings", component: SettingsComponent},
-  {path: "timer", component: TimerComponent}
+  {path: "timer", component: TimerComponent},
+  { path: '', redirectTo: 'clock', pathMatch: 'full' },
 ];

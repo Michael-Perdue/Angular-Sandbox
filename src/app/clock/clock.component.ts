@@ -1,12 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {interval} from "rxjs";
 import {SettingsComponent} from "../settings/settings.component";
+import {RouterLink} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-clock',
   standalone: true,
   imports: [
-    SettingsComponent
+    SettingsComponent,
+    RouterLink,
+    NgIf
   ],
   templateUrl: './clock.component.html',
   styleUrl: './clock.component.css'
