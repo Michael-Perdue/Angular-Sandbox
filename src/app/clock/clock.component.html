@@ -1,1 +1,4 @@
-<p>clock works!</p>
+<main [class]="size">
+  <h1>{{time}}</h1>
+</main>
+<app-settings (dataUpdated)="updateSize($event)"></app-settings>
