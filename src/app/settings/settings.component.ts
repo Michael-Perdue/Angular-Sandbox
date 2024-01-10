@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Inject, Input, Output} from '@angular/core';
 import {DOCUMENT, NgForOf, NgIf} from "@angular/common";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-settings',
@@ -7,6 +8,14 @@ import {DOCUMENT, NgForOf, NgIf} from "@angular/common";
   imports: [
     NgForOf,
     NgIf
+  ],
+  animations: [
+    trigger('fadeInOut', [
+      state('in', style({ opacity: 1 })),
+      state('out', style({ opacity: 0 })),
+      transition('in => out', animate('500ms ease-out')),
+      transition('out => in', animate('500ms ease-in')),
+    ]),
   ],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.css'

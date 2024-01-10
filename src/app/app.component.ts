@@ -5,6 +5,7 @@ import {ClockComponent} from "./clock/clock.component";
 import {SettingsComponent} from "./settings/settings.component";
 import {TimerComponent} from "./timer/timer.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

@@ -3,6 +3,10 @@ import {interval} from "rxjs";
 import {SettingsComponent} from "../settings/settings.component";
 import {RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
+import {sizes} from "../animations";
+
+
+
 
 @Component({
   selector: 'app-clock',
@@ -10,13 +14,16 @@ import {NgIf} from "@angular/common";
   imports: [
     SettingsComponent,
     RouterLink,
-    NgIf
+    NgIf,
+  ],
+  animations: [
+    sizes
   ],
   templateUrl: './clock.component.html',
   styleUrl: './clock.component.css'
 })
 export class ClockComponent implements OnInit{
-  size = "small"
+  size = 'small'
   updateSize(updatedData: string) {
     this.size = updatedData;
   }

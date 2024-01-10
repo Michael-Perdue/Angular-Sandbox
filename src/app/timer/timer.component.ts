@@ -3,6 +3,7 @@ import {SettingsComponent} from "../settings/settings.component";
 import {interval} from "rxjs";
 import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import {sizes} from "../animations";
 
 @Component({
   selector: 'app-timer',
@@ -12,6 +13,7 @@ import {RouterLink} from "@angular/router";
     NgIf,
     RouterLink
   ],
+  animations: [sizes],
   templateUrl: './timer.component.html',
   styleUrl: './timer.component.css'
 })
