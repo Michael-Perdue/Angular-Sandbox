@@ -1,13 +1,15 @@
 import {Component, EventEmitter, Inject, Input, Output} from '@angular/core';
 import {DOCUMENT, NgForOf, NgIf} from "@angular/common";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-settings',
   standalone: true,
   imports: [
     NgForOf,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   animations: [
     trigger('fadeInOut', [
@@ -29,10 +31,13 @@ export class SettingsComponent {
     {label:'light',value:"white"}
   ];
   @Output() dataUpdated = new EventEmitter<string>();
-
+  @Input() type: 'clock' | 'timer' = "clock";
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
 
+  get opposite(): 'clock' | 'timer' {
+    return this.type === 'clock' ? 'timer' : 'clock';
+  }
 
   optionChange(color: string){
     this.selected = color;

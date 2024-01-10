@@ -3,7 +3,4 @@
     <button (click)="handleClick()">{{ clicked ? 'stop' : 'start' }}</button>
     <button (click)="resetClick()">reset</button>
 </div>
-<app-settings (dataUpdated)="updateSize($event)"></app-settings>
-<div *ngIf="size == 'small'">
-  <button [routerLink]="'/clock'">Switch to clock</button>
-</div>
+<app-settings (dataUpdated)="updateSize($event)" [type]="'timer'"></app-settings>
