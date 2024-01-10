@@ -1,4 +1,4 @@
-# Untitled1
+# Testing out Angular by building a utility website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
