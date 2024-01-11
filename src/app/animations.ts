@@ -11,8 +11,5 @@ export const buttonSize = trigger('buttonSize', [
   state('small', style({ fontSize: '2vh' })),
   state('big', style({ fontSize: '4vh' })),
   transition('void => *', animate('0ms')),
-  transition('* => *', [
-    style({ transition: 'font-size 500ms ease-in-out' }), // Ensure font-size has a transition
-    animate('500ms ease-in-out'),
-  ]),
-]);
+  transition('* => *', animate('500ms ease-in-out'))
+  ]);
