@@ -2,6 +2,7 @@ import {Component, EventEmitter, Inject, Input, Output} from '@angular/core';
 import {DOCUMENT, NgForOf, NgIf} from "@angular/common";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {RouterLink} from "@angular/router";
+import {buttonSize} from "../animations";
 
 @Component({
   selector: 'app-settings',
@@ -11,6 +12,7 @@ import {RouterLink} from "@angular/router";
     NgIf,
     RouterLink
   ],
+  animations: [buttonSize],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.css'
 })
@@ -31,6 +33,11 @@ export class SettingsComponent {
   get opposite(): 'clock' | 'timer' {
     return this.type === 'clock' ? 'timer' : 'clock';
   }
+
+  get clickType(): 'small' | 'big' {
+    return this.clicked ? 'small' : 'big';
+  }
+
   optionChange(color: string){
     this.selected = color;
     document.body.className = color;
@@ -38,8 +45,8 @@ export class SettingsComponent {
   handleClick() {
     this.clicked = !this.clicked
     if(this.clicked)
-      this.dataUpdated.emit('big');
-    else
       this.dataUpdated.emit('small');
+    else
+      this.dataUpdated.emit('big');
   }
 }

@@ -1,6 +1,6 @@
 <app-weather></app-weather>
-<div [@sizes]="size">
-  <h1>{{time}}</h1>
+<div>
+  <h1 [@sizes]="size">{{time}}</h1>
 </div>
 <app-settings (dataUpdated)="updateSize($event)"></app-settings>
 

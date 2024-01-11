@@ -3,22 +3,24 @@ import {SettingsComponent} from "../settings/settings.component";
 import {interval} from "rxjs";
 import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
-import {sizes} from "../animations";
+import {buttonSize, sizes} from "../animations";
+import {WeatherComponent} from "../weather/weather.component";
 
 @Component({
   selector: 'app-timer',
   standalone: true,
-  imports: [
-    SettingsComponent,
-    NgIf,
-    RouterLink
-  ],
-  animations: [sizes],
+    imports: [
+        SettingsComponent,
+        NgIf,
+        RouterLink,
+        WeatherComponent
+    ],
+  animations: [sizes,buttonSize],
   templateUrl: './timer.component.html',
   styleUrl: './timer.component.css'
 })
 export class TimerComponent implements OnInit {
-  size = "small"
+  size = "big"
   clicked = false
   updateSize(updatedData: string) {
     this.size = updatedData;

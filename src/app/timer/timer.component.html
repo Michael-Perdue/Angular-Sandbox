@@ -1,6 +1,7 @@
-<div [@sizes]="size">
-  <h1>{{time}}</h1>
-    <button (click)="handleClick()">{{ clicked ? 'stop' : 'start' }}</button>
-    <button (click)="resetClick()">reset</button>
+<app-weather></app-weather>
+<div >
+  <h1 [@sizes]="size">{{time}}</h1>
+    <button [@buttonSize]="size" (click)="handleClick()">{{ clicked ? 'Stop' : 'Start' }}</button>
+    <button [@buttonSize]="size"  (click)="resetClick()">Reset</button>
 </div>
 <app-settings (dataUpdated)="updateSize($event)" [type]="'timer'"></app-settings>

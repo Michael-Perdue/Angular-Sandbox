@@ -22,7 +22,7 @@ import {WeatherComponent} from "../weather/weather.component";
   styleUrl: './clock.component.css'
 })
 export class ClockComponent implements OnInit{
-  size = 'small'
+  size = 'big'
 
   updateSize(updatedData: string) {
     this.size = updatedData;

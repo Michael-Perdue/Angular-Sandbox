@@ -1,0 +1,17 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8em;
+}
+
+.weather-container {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 10px;
+  }
+  p{
+    font-size: 1em;
+  }
+}
