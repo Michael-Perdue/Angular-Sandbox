@@ -3,7 +3,7 @@ import {SettingsComponent} from "../settings/settings.component";
 import {interval} from "rxjs";
 import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
-import {buttonSize, sizes} from "../animations";
+import {buttonSize, imgSize, sizes} from "../animations";
 import {WeatherComponent} from "../weather/weather.component";
 
 @Component({
@@ -15,7 +15,7 @@ import {WeatherComponent} from "../weather/weather.component";
         RouterLink,
         WeatherComponent
     ],
-  animations: [sizes,buttonSize],
+  animations: [sizes,buttonSize,imgSize],
   templateUrl: './timer.component.html',
   styleUrl: './timer.component.css'
 })

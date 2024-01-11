@@ -1,7 +1,9 @@
 <app-weather></app-weather>
 <div >
   <h1 [@sizes]="size">{{time}}</h1>
-    <button [@buttonSize]="size" (click)="handleClick()">{{ clicked ? 'Stop' : 'Start' }}</button>
-    <button [@buttonSize]="size"  (click)="resetClick()">Reset</button>
+  <div class="buttons">
+    <img [@imgSize]="size" [src]= "clicked ? 'assets/pause.png' : 'assets/play.png'" (click)="handleClick()">
+    <img [@imgSize]="size" [src]= "'assets/stop.png'" (click)="resetClick()">
+  </div>
 </div>
 <app-settings (dataUpdated)="updateSize($event)" [type]="'timer'"></app-settings>

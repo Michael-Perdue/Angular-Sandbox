@@ -13,3 +13,10 @@ export const buttonSize = trigger('buttonSize', [
   transition('void => *', animate('0ms')),
   transition('* => *', animate('500ms ease-in-out'))
   ]);
+
+export const imgSize = trigger('imgSize', [
+  state('small', style({ transform: 'scale(0.8)'})),
+  state('big', style({ transform: 'scale(1)' })),
+  transition('void => *', animate('0ms')),
+  transition('* => *', animate('500ms ease-in-out'))
+]);
