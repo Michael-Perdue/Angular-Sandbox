@@ -21,7 +21,7 @@ export class WeatherComponent implements OnInit{
   }
   async updateTemps(){
     try {
-      const json = await this.apiService.weatherService();
+      const json = await this.apiService.weatherService("LA1");
       console.log(json["current"]);
       this.actualTemp = json["current"]["temp_c"];
       this.feelTemp = json["current"]["feelslike_c"];
