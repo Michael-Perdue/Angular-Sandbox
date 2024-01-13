@@ -6,10 +6,12 @@ import {environment} from "../environment/environment";
 })
 export class ApiService {
 
-  constructor() { }
+  postcode = "LA1"
 
-  async weatherService(postcode:string){
-    let response =  await this.requestService("https://api.weatherapi.com/v1/current.json","&q=" +postcode)
+  constructor() { }
+  
+  async weatherService(){
+    let response =  await this.requestService("https://api.weatherapi.com/v1/current.json","&q=" +this.postcode)
     return await response;
   }
 

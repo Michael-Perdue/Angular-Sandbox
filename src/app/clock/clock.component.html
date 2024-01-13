@@ -3,4 +3,6 @@
   <h1 [@sizes]="size">{{time}}</h1>
 </div>
 <app-settings (dataUpdated)="updateSize($event)"></app-settings>
+<div *ngIf="size == 'small'">
 
+</div>
