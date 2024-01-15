@@ -5,19 +5,14 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private signedIn  = new BehaviorSubject<boolean>(false);
   
-  get isSignedIn(){
-    return this.signedIn
-  }
-
   login(user:string, pass:string){
-    this.signedIn.next(true)
+    localStorage.setItem("loggedIn","true");
   }
 
 
-  public logout(){
-    this.signedIn.next(false)
+  logout(){
+    localStorage.removeItem("loggedIn");
   }
 
 }
