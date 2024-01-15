@@ -23,13 +23,13 @@ export class SettingsComponent {
   selected: string = "white";
   clicked = false;
   title = 'Settings';
-
+  @Output() dataUpdated = new EventEmitter<string>();
+  @Input() type: 'clock' | 'timer' = "clock";
   items= [
     {label: 'dark', value: "black"},
     {label:'light',value:"white"}
   ];
-  @Output() dataUpdated = new EventEmitter<string>();
-  @Input() type: 'clock' | 'timer' = "clock";
+
   constructor(@Inject(DOCUMENT) private document: Document, public apiService: ApiService) {}
 
   get opposite(): 'clock' | 'timer' {
