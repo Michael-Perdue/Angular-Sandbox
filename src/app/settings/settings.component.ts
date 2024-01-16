@@ -5,6 +5,7 @@ import {RouterLink} from "@angular/router";
 import {buttonSize} from "../animations";
 import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-settings',
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     NgForOf,
     NgIf,
     RouterLink,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   animations: [buttonSize],
   templateUrl: './settings.component.html',
@@ -30,7 +32,7 @@ export class SettingsComponent {
     {label:'light',value:"white"}
   ];
 
-  constructor(@Inject(DOCUMENT) private document: Document, public apiService: ApiService) {}
+  constructor(@Inject(DOCUMENT) private document: Document, public apiService: ApiService, private translateService: TranslateService ) {}
 
   get opposite(): 'clock' | 'timer' {
     return this.type === 'clock' ? 'timer' : 'clock';
@@ -38,6 +40,10 @@ export class SettingsComponent {
 
   get clickType(): 'small' | 'big' {
     return this.clicked ? 'small' : 'big';
+  }
+
+  get hide(): string{
+    return this.clicked ? $localize`Hide` : $localize`Show`
   }
 
   optionChange(color: string){

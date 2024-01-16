@@ -5,6 +5,7 @@ import {RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {sizes} from "../animations";
 import {WeatherComponent} from "../weather/weather.component";
+import { TranslateModule,TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-clock',
@@ -14,6 +15,7 @@ import {WeatherComponent} from "../weather/weather.component";
     RouterLink,
     NgIf,
     WeatherComponent,
+    TranslateModule
   ],
   animations: [
     sizes
@@ -23,6 +25,8 @@ import {WeatherComponent} from "../weather/weather.component";
 })
 export class ClockComponent implements OnInit{
   size = 'big'
+
+  constructor(private translateService:  TranslateService){}
 
   updateSize(updatedData: string) {
     this.size = updatedData;

@@ -16,8 +16,8 @@ export class LoginComponent {
 
   
   loginForm = this.formBuilder.group({
-    username: '' ,
-    password: ''
+    username: $localize`username`,
+    password: $localize`password`
   });
 
   constructor(private authService:AuthService,private formBuilder:FormBuilder, private router: Router,private translateService:  TranslateService){
