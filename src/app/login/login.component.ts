@@ -3,11 +3,12 @@ import { AuthService } from '../auth.service';
 import { FormBuilder,ReactiveFormsModule} from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,HttpClientModule],
+  imports: [ReactiveFormsModule,HttpClientModule,TranslateModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -15,11 +16,11 @@ export class LoginComponent {
 
   
   loginForm = this.formBuilder.group({
-    username: 'user',
-    password: 'pass'
+    username: '' ,
+    password: ''
   });
 
-  constructor(private authService:AuthService,private formBuilder:FormBuilder, private router: Router){
+  constructor(private authService:AuthService,private formBuilder:FormBuilder, private router: Router,private translateService:  TranslateService){
     localStorage.removeItem("loggedIn");
   }
   
