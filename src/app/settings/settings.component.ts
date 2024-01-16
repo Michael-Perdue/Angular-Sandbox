@@ -24,17 +24,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class SettingsComponent {
   selected: string = "white";
   clicked = false;
-  title = 'Settings';
+  title = $localize`Settings`;
   @Output() dataUpdated = new EventEmitter<string>();
   @Input() type: 'clock' | 'timer' = "clock";
   items= [
-    {label: 'dark', value: "black"},
-    {label:'light',value:"white"}
+    {label: $localize`dark`, value: "black"},
+    {label:$localize`light`,value:"white"}
   ];
 
   constructor(@Inject(DOCUMENT) private document: Document, public apiService: ApiService, private translateService: TranslateService ) {}
 
-  get opposite(): 'clock' | 'timer' {
+  opposite(localized:boolean):string{
+    if(localized)
+      this.type === 'clock' ? $localize`timer` : $localize`clock`;
     return this.type === 'clock' ? 'timer' : 'clock';
   }
 
