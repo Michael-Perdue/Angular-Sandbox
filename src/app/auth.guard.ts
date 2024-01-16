@@ -7,6 +7,7 @@ export const authGuard: CanActivateFn = CanActivate;
 function CanActivate(route: ActivatedRouteSnapshot,state: RouterStateSnapshot): boolean{
   const loggedIn = localStorage.getItem("loggedIn")
   const router = inject(Router);
+  console.log(loggedIn)
   if (loggedIn) {
       return true;
   } else {
