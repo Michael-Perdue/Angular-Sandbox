@@ -13,16 +13,19 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class LoginComponent {
 
+  
   loginForm = this.formBuilder.group({
     username: 'user',
     password: 'pass'
   });
 
-  constructor(private authService:AuthService,private formBuilder:FormBuilder, private router: Router){}
+  constructor(private authService:AuthService,private formBuilder:FormBuilder, private router: Router){
+    localStorage.removeItem("loggedIn");
+  }
   
-  login(){
+  async login(){
     console.log(this.loginForm.value.username || "user",this.loginForm.value.password || "pass")
-    this.authService.login(this.loginForm.value.username || "user",this.loginForm.value.password || "pass");
+    await this.authService.login(this.loginForm.value.username || "user",this.loginForm.value.password || "pass");
     this.router.navigate(['/clock']);
   }
 }
