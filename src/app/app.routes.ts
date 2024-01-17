@@ -1,3 +1,4 @@
+import { NotfoundComponent } from './notfound/notfound.component';
 import { Routes } from '@angular/router';
 import { ClockComponent } from './clock/clock.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -11,5 +12,6 @@ export const routes: Routes = [
   {path: "settings", component: SettingsComponent, canActivate: [authGuard]},
   {path: "timer", component: TimerComponent, canActivate: [authGuard]},
   {path: "weather", component: WeatherComponent, canActivate: [authGuard]},
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  {path: "404", component: NotfoundComponent},
+  { path: '**', redirectTo: '404', pathMatch: 'full' }
 ];

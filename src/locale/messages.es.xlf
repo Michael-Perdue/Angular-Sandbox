@@ -13,6 +13,10 @@
           <context context-type="sourcefile">src/app/login/login.component.html</context>
           <context context-type="linenumber">12,13</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="5625146011024730344" datatype="html">
         <source>Username: </source>
@@ -128,7 +132,7 @@
       </trans-unit>
       <trans-unit id="2770166870006762730" datatype="html">
         <source>light</source>
-        <target>Ligero</target>
+        <target>ligero</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -136,7 +140,7 @@
       </trans-unit>
       <trans-unit id="2136533228662525174" datatype="html">
         <source>timer</source>
-        <target>Temporizador</target>
+        <target>temporizador</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -164,6 +168,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/settings/settings.component.html</context>
           <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3187298557025243259" datatype="html">
+        <source>404: PAGE NOT FOUND</source>
+        <target>404: PÁGINA NO ENCONTRADA</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
     </body>
