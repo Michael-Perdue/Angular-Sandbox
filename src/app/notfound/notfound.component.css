@@ -1,0 +1,14 @@
+
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  li {
+    margin-bottom: 10px; 
+  }

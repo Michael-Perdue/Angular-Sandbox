@@ -14,7 +14,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
-          <context context-type="linenumber">2,4</context>
+          <context context-type="linenumber">6,7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5625146011024730344" datatype="html">
@@ -45,11 +45,46 @@
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4134224390899056822" datatype="html">
+        <source>LOGIN ERROR: Invalid username or password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3187298557025243259" datatype="html">
         <source>404: PAGE NOT FOUND</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
           <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4372352591753131487" datatype="html">
+        <source>The page you are looking for does not exist.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8110349556269742587" datatype="html">
+        <source>Other Popular Pages:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3821379242705597471" datatype="html">
+        <source>Clock</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6083026006568353651" datatype="html">
+        <source>Timer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notfound/notfound.component.html</context>
+          <context context-type="linenumber">8,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6709438352528040176" datatype="html">

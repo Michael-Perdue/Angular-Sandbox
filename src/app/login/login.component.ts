@@ -27,6 +27,9 @@ export class LoginComponent {
   async login(){
     console.log(this.loginForm.value.username || "user",this.loginForm.value.password || "pass")
     await this.authService.login(this.loginForm.value.username || "user",this.loginForm.value.password || "pass");
+    if(localStorage.getItem("loggedIn") == null){
+      alert($localize`LOGIN ERROR: Invalid username or password`)
+    }
     this.router.navigate(['/clock']);
   }
 }
