@@ -1,6 +1,15 @@
 <app-weather></app-weather>
 <div >
-  <h1 [@sizes]="size">{{time}}</h1>
+  <div class="center">
+    <div class="inline" *ngIf="timeMin !=0" >
+      <h1 [@sizes]="size" >{{timeMin}}</h1>   
+      <h2>min</h2>
+    </div>
+    <div class="inline">
+      <h1 [@sizes]="size">{{timeSec}}</h1>   
+      <h2>s</h2>
+    </div>
+  </div>
   <div class="buttons">
     <img [@imgSize]="size" [src]= "clicked ? 'assets/pause.png' : 'assets/play.png'" (click)="handleClick()">
     <img [@imgSize]="size" [src]= "'assets/stop.png'" (click)="resetClick()">

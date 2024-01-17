@@ -25,19 +25,43 @@ export class TimerComponent implements OnInit {
   updateSize(updatedData: string) {
     this.size = updatedData;
   }
+
   time = 0;
+  timeSec = 0;
+  timeMin = 0;
+  
+  formatToDigits(num: number):string{
+    return (num>9 ? "" : "0") + String(num);
+  }
+
+  timeString(){
+    let str = "0s"
+    if (this.time/60 >= 1){
+      this.timeMin  = Number((this.time/60).toFixed(0))
+      this.timeSec  = this.time % 60
+    }
+    else{
+      this.timeSec = this.time
+    }
+
+  }
 
   ngOnInit() : void {
     interval(1000).subscribe(() => this.updateTime());
   }
   resetClick(){
     this.time = 0
+    this.timeSec = 0;
+    this.timeMin = 0;
   }
   handleClick(){
     this.clicked = !this.clicked;
   }
   updateTime() : void {
-    if(this.clicked)
+    if(this.clicked){
       this.time = this.time +=1
+      this.timeString()
+    }
+    
   }
 }

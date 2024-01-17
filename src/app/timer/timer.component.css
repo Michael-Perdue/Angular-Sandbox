@@ -18,3 +18,26 @@ img{
   cursor: pointer;
   margin: 0px 5px 0px 10px;
 }
+
+.inline{
+  display: flex;
+  align-items: baseline; 
+  justify-content: center;
+  margin-right: 50px;
+  h1{
+    margin: 0;
+  }  
+  h2{
+    margin:0;
+    vertical-align: bottom;
+  }
+}
+
+.inline:last-child {
+  margin-right: 0;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
