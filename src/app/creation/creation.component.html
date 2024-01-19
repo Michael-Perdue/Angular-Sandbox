@@ -1,0 +1,14 @@
+<h2 i18n>Create Account</h2>
+<form [formGroup]="accountCreationForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label i18n>Username: </label>
+        <input type="text" formControlName="username">
+    </div>
+    <div>
+        <label i18n>Password: </label>
+        <input type="text" formControlName="password" >
+    </div>
+    <button i18n type="submit">Create Account</button>
+    <br><br>
+    <a i18n [routerLink]="'/login'">Go back to login page</a>
+</form>

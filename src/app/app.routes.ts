@@ -6,8 +6,11 @@ import { TimerComponent } from './timer/timer.component';
 import {WeatherComponent} from "./weather/weather.component";
 import { LoginComponent } from './login/login.component';
 import { authGuard } from './auth.guard';
+import { CreationComponent } from './creation/creation.component';
+
 export const routes: Routes = [
   {path: "login", component: LoginComponent},
+  {path: "create", component: CreationComponent},
   {path: "clock", component: ClockComponent, canActivate: [authGuard]},
   {path: "settings", component: SettingsComponent, canActivate: [authGuard]},
   {path: "timer", component: TimerComponent, canActivate: [authGuard]},

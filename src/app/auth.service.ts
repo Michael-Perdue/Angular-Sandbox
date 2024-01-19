@@ -25,6 +25,16 @@ export class AuthService {
     }catch(error){console.log(error)}
   }
 
+  async createLogin(user:string, pass:string){
+    let response = await fetch("https://localhost:7102/api/login/Add/User?user=" + user + "&pass=" +pass,{method:"POST"});
+    console.log(response)
+    try{
+      if(response["status"] == 200){
+          console.log(response)
+      }
+    }catch(error){console.log(error)}
+  }
+
 
   logout(){
     localStorage.removeItem("loggedIn");

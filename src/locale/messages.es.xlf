@@ -218,6 +218,34 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="8829196944831679938" datatype="html">
+        <source>Go back to login page</source>
+        <target>Volver a la página de inicio de sesión</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/creation/creation.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2308975396733519902" datatype="html">
+        <source>Create an account</source>
+        <target>Crea una cuenta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+        <trans-unit id="1267967133679326155" datatype="html">
+        <source>Create Account</source>
+        <target>Crear Una Cuenta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/creation/creation.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/creation/creation.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
