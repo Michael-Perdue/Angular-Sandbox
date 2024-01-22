@@ -29,7 +29,7 @@ export class AuthService {
     let response = await fetch("https://localhost:7102/api/login/Add/User?user=" + user + "&pass=" +pass,{method:"POST"});
     console.log(response)
     try{
-      if(response["status"] == 200){
+      if(response["status"] == 201){
           console.log(response)
       }
     }catch(error){console.log(error)}
